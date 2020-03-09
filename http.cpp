@@ -216,6 +216,7 @@ char * http_get(const char *url)
     }
  
     sprintf(lpbuf,HTTP_GET,file,host_addr,port);
+    //printf("lpbuf: %s\n", lpbuf);
  
     if(http_tcpclient_send(socket_fd,lpbuf,strlen(lpbuf)) < 0){
         printf("http_tcpclient_send failed..\n");
